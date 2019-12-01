@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Notes Pt.2</title>
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--External CSS-->
+    <link rel="stylesheet" href="Styles.css">
+
+</head>
+
+<body>
+    <!--Top Nav-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+        <a class="navbar-brand" href="#">Dylan's Unity Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Notes_Pt.1.html">Tutorial Week 1</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Notes_Pt.2.html">Tutorial Week 2<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Notes_Final.html">Tutorial Week 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Demo.html">Game Demo</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Page Contents-->
+
+    <div class="card marginBottom hidden">
+        <img src="the-dangers/test.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <p class="card-text"></p>
+        </div>
+    </div>
+
+    <div class="card-deck 
+marginTop">
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Episode 4: Camera Follow</h5>
+                <p class="card-text"> - The simplest way to get the camera to follow the player is to "Parent" the camera to the player by dragging the camera onto the player in the "Hierarchy View"</p>
+                <p class="card-text"> Note: using this method will cause the camera will rotate with the player</p>
+                <p class="card-text"> *The other way to have the camera follow the player is to create a script for the camera </p>
+                <p class="card-text"> -Enter in the code "public Transform player;" and drag the player object from the hierarchy view into the new "player" slot in the camera's "Inspector View"</p>
+                <p class="card-text"> Note: “Transform" and "transform" are different</p>
+                <p class="card-text">Transform: Refers to another object</p>
+                <p class="card-text">transform: Refers to the current object</p>
+                <p class="card-text"> -the code "transform.position = player.position;" will cause the camera to follow the player</p>
+                <p class="card-text"> Note: Leaving the code at this will cause the camera to be placed inside of the player object, creating a sort of "First Person" perspective</p>
+                <p class="card-text"> *The Vector3 variable stores 3 floats and can be used to specify the "x, y , and z" values</p>
+                <p class="card-text"> *When creating the "Vector3" and naming it (ex: offset") you will take the code for "transform.position" and change it to "transform.position = player.position + offset;"</p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Episode 5: Collision</h5>
+                <p class="card-text"> *when creating code for object collision you can remove the starting "void start" and "void update" methods</p>
+                <p class="card-text">
+                     Note: when creating collision code, you can add it to the existing code for movement or create a new script for it</p>
+                <p class="card-text"> *The method for collision is "void OnCollisionEnter ()"</p>
+                <p class="card-text"> -This means that whatever code is within the brackets, will occur when this object collides with something. (needs "RigidBody" and "Collider")</p>
+                <p class="card-text"> -you can find objects by using collisionInfo.gameObject.name == "insert object name here"</p>
+                <p class="card-text"> note: this can cause complications like slow down the more objects that are added to the game</p>
+                <p class="card-text"> *instead of "name" using "tag" can put objects into categories and makes the search process faster and easier</p>
+                <p class="card-text"> -to create a new tag for an object or set of objects</p>
+                <p class="card-text"> *If you want an object to stop moving after it collides with something you can make a variable based on the created movement script</p>
+                <p class="card-text"> -After dragging the movement script into the new slot (ex: movement) you can enter within the if statement that says, "When this object hits object2...." you can enter</p>
+                <p class="card-text"> movement.enabled = false;</p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-deck 
+marginTop">
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Episode 6: Gameplay</h5>
+                <p class="card-text">you can drag objects like your Obstacles into the "Project View" in order to turn them into reusable assets</p>
+                <p class="card-text">
+                     In the "Scene View" after selecting an object you can select an axis from the top left of the view to get better angles for designing</p>
+                <p class="card-text"> -You can add a new layer to an object and after selecting it, lock it</p>
+                <p class="card-text"> This will make selecting other objects much easier, as locking it prevents it from being selected in the "Scene View"</p>
+                <p class="card-text"> *If you want to be more precise you can go to "Edit" and select "Snap Settings"</p>
+                <p class="card-text"> -Snap Settings allow movement only along a grid and the length of that movement can be determined by editing how for each goes in the x,y,z panel that pops up after selecting the setting</p>
+                <p class="card-text"> -You can press ctrl + d in order to copy an object in the scene view</p>
+                <p class="card-text"> *to use the snap setting, hold ctrl when moving the object</p>
+                <p class="card-text"> -Simply adding force to an object builds up momentum all the way up to the designated force</p>
+                <p class="card-text">Force Types</p>
+                <p class="card-text"> -This comes in at "x, y, z, Force Type" when adding force</p>
+                <p class="card-text"> -"Velocity Change" completely ignores the mass of the object when applying force</p>
+                <p class="card-text"> *If you move to the "Window" tab and then "Rendering" tab, you can find the Lighting settings</p>
+                <p class="card-text"> -there, you can adjust lighting, shadows, add fog, and more</p>
+                <p class="card-text"> -increasing the "Drag" increases the air resistance the object faces when moving allowing for more responsive movement.</p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Episode 7: Score and UI</h5>
+                <p class="card-text"> Build Settings Window:</p>
+                <p class="card-text">*To begin, go to the "Hierarchy View", right click, "Create", "UI" and select what you would want</p>
+                <p class="card-text"> -You can go into the 2D View to more easily customize your UI</p>
+                <p class="card-text"> -If you want text in your UI to resize change the setting on the "Canvas" labeled "UI Scale Mode" from "Constant Pixel Size" to "Scale With Screen Size"/p>
+                <p class="card-text"> -Also create a variable that will contain the "Score"</p>
+                <p class="card-text"> *ex: scoreText.text = player.position.z.ToString("0");</p>
+                <p class="card-text"> -the "("0")" is so that the score is only counted in whole numbers and not excessive decimal places</p>
+                <p class="card-text"> *Because this is interacting with your new "UI" that was created; at the top of the script, add "using UnityEngine.UI;"</p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center footerColor heightFooter"><br><br><br>Designed and coded by Dylan Ronquillo, Unity Final Project 2019</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+/*General*/
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+a {
+    color: black
+}
+
+a:hover {
+    color: #5bac6e
+}
+
+a.source {
+    color: #5bac6e
+}
+
+.navbar {
+    background-color: #3f36a8;
+}
+
+.navbar .navbar-brand {
+    color: #ecf0f1;
+}
+
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+    color: #ffffff;
+}
+
+.Header {
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.color {
+    color: black;
+    background-color: #d3d3d3;
+}
+
+.logoStyle {
+    height: auto;
+    width: 11%;
+    float: right;
+    margin: 8%;
+}
+
+.logoText {
+    float: right;
+    margin: 5%;
+    padding-right: 20px;
+    position: absolute;
+    top: 50%;
+    left: 73%;
+    font-size: 125%;
+}
+
+.footerColor {
+    color: white;
+    background-color: #3f36a8;
+}
+
+body {
+    background-color: #000000;
+}
+
+.headHeight {
+    height: 500px;
+}
+
+.marginTop {
+    margin-top: 50px
+}
+
+.marginBottom {
+    margin-bottom: 50px
+}
+
+
+.heightFooter {
+    height: 200px;
+    margin-top: 50px;
+}
+
+
+/*General End*/
+
+
+/*----------Mobile View----------*/
+@media screen and (max-width: 1200px) {
+
+    /*General Mobile*/
+
+    .marginTop {
+        margin-top: 50px;
+    }
+
+    /*General Mobile End*/
+
+}
+
+/*----------Mobile View End ----------*/

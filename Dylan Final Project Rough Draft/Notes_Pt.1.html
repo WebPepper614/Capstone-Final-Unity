@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Notes Pt.1</title>
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--External CSS-->
+    <link rel="stylesheet" href="Styles.css">
+
+</head>
+
+<body>
+    <!--Top Nav-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+        <a class="navbar-brand" href="#">Dylan's Unity Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Notes_Pt.1.html"><span class="sr-only">(current)</span>Tutorial Week 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Notes_Pt.2.html">Tutorial Week 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Notes_Final.html">Tutorial Week 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Demo.html">Game Demo</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Page Contents-->
+
+    <div class="card marginBottom hidden">
+        <img src="the-dangers/test.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <p class="card-text"></p>
+        </div>
+    </div>
+
+    <div class="card-deck 
+marginTop">
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Video Tutorial</h5>
+                <p class="card-text">The online video tutorial im following goes through all the basics of general game creation within the unity engine, and goes through the creation of a "Endless Runner" as the game example.</p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-deck 
+marginTop">
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Episode 1: Basics</h5>
+                <p class="card-text"> -When creating a new project, you can choose between making it 2D or 3D (Only a few settings are changed between the two, and those changes can be altered later.)</p>
+                <p class="card-text"> *If you move over to the "Hierarchy view" you can right click inside of it(or click on create) to create objects such as squares or spheres as an example</p>
+                <p class="card-text"> -Going to "Transform" on an object and hitting reset, will center it in the scene view</p>
+                <p class="card-text"> *In order to give color to an object you can create and assign a material to it</p>
+                <p class="card-text"> -To create a material, you go to the "Project View", right click, and create material</p>
+                <p class="card-text"> -A good habit would be to use naming conventions for these such as playerMat</p>
+                <p class="card-text"> *In order to give an object gravity and actual physics, you must a "Collider", "Mesh Renderer", and the "Rigid Body" component</p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-deck 
+marginTop">
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Episode 2: Programming</h5>
+                <p class="card-text">*To start, you must go to "Add Component", "Add Script"</p>
+                <p class="card-text">
+                     -side note: you can drag components from the "Project View" into the "Inspector View" of other objects to add it to them</p>
+                <p class="card-text">-Delete The top two "using tags" to clean up</p>
+                <p class="card-text"> -"Void Start" means that whatever code is within the brackets, will be executed as soon as the game starts.</p>
+                <p class="card-text"> -after framing the selected object (F) click on the "Move Tool" in the top left of the toolbar (Shortcut is "W"). You can then drag the object using the arrows (red= left/right) (green= up/down)</p>
+                <p class="card-text"> -Use Capitals in C# as it is case sensitive</p>
+                <p class="card-text"> -To write messages into the console type "Debug.Log()"</p>
+                <p class="card-text"> * Enter in "Public" above the brackets and enter in a component and its reference name</p>
+                <p class="card-text">  Ex: public RigidBody rb;</p>
+                <p class="card-text">  This will add an empty slot under your created script </p>
+                <p class="card-text"> -You can then drag the "RigidBody" component into that slot, so whenever you reference "rb" in the code it references "RigidBody"</p>
+                <p class="card-text"> -When entering code such as "rb.AddForce(); you need to specify details within the parenthesis</p>
+                <p class="card-text"> -When specifying the axis "(0,0,0) it goes "x,y,z"</p>
+                <p class="card-text"> * multiplying by Time.deltaTime essentially evens things out no matter the frame rates your computer is running</p>
+                <p class="card-text"> *When calculating physics (Adding forces, changing velocity, etc.) it’s better to use "FixedUpdate" rather than just "Update"</p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+        </div>
+    </div>
+    
+        <div class="card-deck 
+marginTop">
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Episode 3: Movement</h5>
+                <p class="card-text">Creating a "Physics Material" or PhysicsMat can change the friction or bounciness of an object</p>
+                <p class="card-text">
+                     *There are 4 key data types: int, float, string, and bool</p>
+                <p class="card-text">int: whole number</p>
+                <p class="card-text">float: decimal number</p>
+                <p class="card-text">string: text</p>
+                <p class="card-text">bool: true or false</p>
+                <p class="card-text">In order to begin a player input code, you must use an "If" statement</p>
+                <p class="card-text">ex: if (Input.GetKey("d")</p>
+                <p class="card-text">	rb.AddForce(500, 0, 0);</p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center footerColor heightFooter"><br><br><br>Designed and coded by Dylan Ronquillo, Unity Final Project 2019</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
