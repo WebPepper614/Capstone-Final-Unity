@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--External CSS-->
+    <link rel="stylesheet" href="Styles.css">
+
+</head>
+
+<body>
+    <!--Top Nav-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+        <a class="navbar-brand" href="#">Dylan's Unity Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Notes_Pt.1.html">Tutorial Week 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Notes_Pt.2.html">Tutorial Week 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Notes_Final.html">Tutorial Week 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Demo.html">Game Demo</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Page Contents-->
+
+    <div class="card marginBottom hidden">
+        <img src="the-dangers/test.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <p class="card-text"></p>
+        </div>
+    </div>
+
+    <div class="card-deck 
+marginTop BorderColor">
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">In Application Tutorial</h5>
+                <p class="card-text">After Downloading The Unity Application, the engine prompts you with a few templates to start your first game. Once you're in, It provides 5 tutorials to start the user off in Unity.</p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-deck 
+marginTop">
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Walkthrough 1: Views/Windows</h5>
+                <p class="card-text">-There are two views in unity: Scene and hierarchy</p>
+                <p class="card-text">Scene View: Allows you to navigate around and edit the scene while also showing the 3d/2d perspective depending on the project</p>
+                <p class="card-text">Hierarchy View: Shows Everything in the current scene that is open in the "Scene View"</p>
+                <p class="card-text">-If you select an object in the hierarchy view and press F in the scene view it will center the view on the selected object</p>
+                <p class="card-text">-Game View is where you can test your game</p>
+                <p class="card-text">-Project Window:</p>
+                <p class="card-text">Displays all available assets that you can use in the project from 3d models, audio files, textures, and more</p>
+                <p class="card-text">-Inspector Window:</p>
+                <p class="card-text">You can change the properties or settings of whatever you have selected</p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Walkthrough 2: Changing Properties</h5>
+                <p class="card-text"> -Component Properties allow game objects to do things (moving, jump height, etc.)</p>
+                <p class="card-text"> -These properties are changed in the Inspector Window</p>
+                <h5 class="card-title">Walkthrough 3: Changing a Color</h5>
+                <p class="card-text"> -Under the "Sprite Renderer" in the "Inspector View" you can select the "color" property to change the color of an object</p>
+                <img src="Images/Screenshot%20(11).jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="card-deck 
+marginTop">
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Walkthrough 4: Adding a Prefab</h5>
+                <p class="card-text">Prefab: This is a game object, complete with all components and properties, that is stored in a asset. This is essentially a reusable preset that can be put at any point in the game</p>
+                <p class="card-text">
+                    -These can be found in the "Project Window"</p>
+                <p class="card-text"> -Prefabs all have a "blue cube" icon next to them in the "Project Window"</p>
+                <p class="card-text"> -You can copy prefabs from the "Project Window" into the "Hierarchy Window" this will spawn it into the scene. (You can click on drag to copy them over)</p>
+                <p class="card-text"> -after framing the selected object (F) click on the "Move Tool" in the top left of the toolbar (Shortcut is "W"). You can then drag the object using the arrows (red= left/right) (green= up/down)</p>
+                <p class="card-text"> -There is also the "Rotate Tool" (E) and the "Scale Tool" (R)</p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Walkthrough 5: Build and Share</h5>
+                <p class="card-text"> Build Settings Window:</p>
+                <p class="card-text"> -Shortcut is (ctrl+shift+B) or you go to the top right, click on file and select "Build Settings"</p>
+                <p class="card-text"> *Scene in Build Section: This is in the top half of the "Build Settings Window"</p>
+                <p class="card-text"> -This portion of the window will show all the scenes in your project that will be part of your "Build"</p>
+                <p class="card-text"> -If you want your game to work on a web browser you need to select WebGL after you have selected "Add Open Scenes"</p>
+                <p class="card-text"> -"Add Open Scenes" on the right where it says "Platform" is where you select what platform your game will run on</p>
+                <p class="card-text"> -After you have selected your platform hit the "Build" button at the bottom of the "Build Settings" window, and select the folder you wish to save your project in</p>
+                <p class="card-text"> *Now got to the "Window" button on the toolbar and select "Share WebGL Game"</p>
+                <p class="card-text"> -Finally, you will name your game, add a thumbnail, and upload it (When the upload is complete a link to your game will be given</p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center footerColor heightFooter"><br><br><br>Designed and coded by Dylan Ronquillo, Unity Final Project 2019</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

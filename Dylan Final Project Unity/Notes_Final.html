@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Notes Final</title>
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--External CSS-->
+    <link rel="stylesheet" href="Styles.css">
+
+</head>
+
+<body>
+    <!--Top Nav-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+        <a class="navbar-brand" href="#">Dylan's Unity Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Notes_Pt.1.html">Tutorial Week 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Notes_Pt.2.html">Tutorial Week 2</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Notes_Final.html"><span class="sr-only">(current)</span>Tutorial Week 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Demo.html">Game Demo</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Page Contents-->
+
+    <div class="card marginBottom hidden">
+        <img src="the-dangers/test.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <p class="card-text"></p>
+        </div>
+    </div>
+
+    <div class="card-deck 
+marginTop">
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Episode 8: Game Over</h5>
+                <p class="card-text"> *Making a "Game Over" screen or even a "Main Menu" should be done in a "Game Manager</p>
+                <p class="card-text"> -To start this, you create an empty object in the "Hierarchy View" and reset its "Transform"</p>
+                <p class="card-text"> -Add a new component as a "Script" labeled "Game Manager"</p>
+                <p class="card-text"> *The Following notes will detail the process of creating a "Game Over" by having the level restart upon failure.</p>
+                <p class="card-text"> - First, delete the two standard functions (Void Start and Void Update)</p>
+                <p class="card-text"> -Now create a new "Custom Function" called, "public void EndGame () { }"</p>
+                <p class="card-text">Note: adding "public" to the void makes it accessible from other scripts since without it, its considered "private" to that specific script.</p>
+                <p class="card-text"> *In order to relate this to the player object we can go into the "Player Collision" Script, and under the if statement enter, "FindObjectOfType<GameManager>().endGame();"</p>
+                    <img src="Images/Game%20Scene%20Example.jpg">
+                <p class="card-text"> -This same code can be added in an "if" statement in the "Player Movement" script for when the player falls off the map.</p>
+                <p class="card-text"> *If you want to restart your game on a "Game Over" or even change the scene depending on what events occur you will need to add "using UnityEngine.SceneManagement;" at the top of your script.</p>
+                <p class="card-text"> *In order to restart a level on the same scene use "SceneManager.LoadScene(SceneManager.GetActiveScene().name);"</p>
+                <p class="card-text"> -Restarting the game with this is initially quite jarring since the scene instantly resets itself so adding a delay can help smoothen the restart.</p>
+                <p class="card-text"> -Using "Invoke" is a good way of doing this.</p>
+                <p class="card-text"> *"File" -> "Build Settings"</p>
+                <p class="card-text"> -This will show all the scenes that will show up when you export the game and lines them up in a queue.</p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-deck 
+marginTop">
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Episode 9: Winning the Level</h5>
+                <p class="card-text"> *The Purpose of this part is creating a simple level win/complete screen and making it appear after reaching the end of the level</p>
+                <p class="card-text"> * To start we can create a "Cube" object and reset its transform</p>
+                <p class="card-text"> - This will be used as the sort of passing point for when the level is supposed to end.</p>
+                <p class="card-text"> - Resize to be big enough that when the player reaches the area the trigger area will activate</p>
+                <p class="card-text"> -We turn off the "Mesh Renderer" so that it does not appear in the game.</p>
+                <p class="card-text"> * Activate the "Is Trigger" box in the "Inspector View"</p>
+                <p class="card-text"> * We will then create a script named something like "EndTrigger" after placing it in the position in which we want our game to end.</p>
+                <p class="card-text"> - After removing the existing "Voids" create an "OnTriggerEnter" void</p>
+                <p class="card-text"> -Also create a public void that links to the "GameManager" and rename it to something similar like "gameManager"</p>
+                <p class="card-text"> *Now on the topic of the Game Manager, we move to its specific script and add a public void for completing the level and we can call it "LevelComplete"</p>
+                <p class="card-text"> -Go back to the "OnTriggerVoid" in the other script and enter "gameManager.LevelComplete();"</p>
+                <p class="card-text"> *Make sure to add the "GameManager"(not the script) into the "EndTrigger" script</p>
+                <p class="card-text"> -Go to your "Canvas" next or create it in the "Hierarchy View"</p>
+                <p class="card-text"> -Create a "Panel" as the base for you win screen</p>
+                <p class="card-text"> *After creating your win screen create a public game object in the "GameManager" script to place it into, and reference it in the public void you made there.</p>
+                <img src="Images/Screenshot%20(8).jpg">
+                <p class="card-text"> -Enter into that void, "completeLevelUI.SetActive(true);"</p>
+                <p class="card-text"> *Next some animation can be added to make the transition into the wind screen much smoother</p>
+                <p class="card-text"> -First go to the "Window" tab and select "Animation" and select the option again within the drop off menu</p>
+                <p class="card-text"> -You can adjust with the time sliders, where certain events will take place such as the panel slowly fading into view</p>
+                <p class="card-text"> *After completing the level, you may want to load the next one right, after and this is where you can add "Script Events" to the animation reel</p>
+                <p class="card-text"> -Go to your win screen panel that you created and make a new script</p>
+                <p class="card-text"> *Make sure you add "using UnityEngine.SceneManagement;" at the top of the code since you will be working with the scenes.</p>
+                <p class="card-text"> -Create a public void and within the brackets enter, "SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);"</p>
+                <p class="card-text"> note: This will attain the current scene and then move to the next one in the "Build Settings" queue</p>
+            </div>
+        </div>
+    </div>
+    
+        <div class="card-deck 
+marginTop">
+        <div class="card">
+            <div class="card-body color">
+                <h5 class="card-title">Final Episode: Finishing Up</h5>
+                <p class="card-text"> Note: To cleanly duplicate levels and still be able to change settings on the objects make important things like the "Game Manager" "Player" and "Main Camera" into Prefabs</p>
+                <p class="card-text"> *To create a Welcome and End Screen, we create new scenes</p>
+                <p class="card-text"> -Creating these screens are as simple as creating a panel and  text to go with it, but adding buttons can help either exit out of the game or start it.</p>
+                <img src="Images/Screenshot%20(10).jpg">
+                <p class="card-text"> *Whether it be in your panel, text, or the button itself; create a script </p>
+                <p class="card-text"> -In it, add a public void for exiting the game</p>
+                <p class="card-text"> -Within the brackets enter "Application.Quit();" to have the button close the game</p>
+                <p class="card-text"> Note: A similar process can be done for the start button on the welcome page</p>
+                <p class="card-text"> -We can enter into the new public void of this new script, "SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);"</p>
+                <p class="card-text"> -This will load the next level/first level (This depends on how the queue is set up in the build settings)</p>
+            </div>
+        </div>
+    </div>
+    
+    <!--Footer-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center footerColor heightFooter"><br><br><br>Designed and coded by Dylan Ronquillo, Unity Final Project 2019</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
